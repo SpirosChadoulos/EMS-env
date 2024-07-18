@@ -1,0 +1,164 @@
+{
+    "os": "Linux-6.5.0-1019-oracle-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-03-29T14:52:13.012768",
+    "startedAt": "2024-03-29T14:52:11.629466",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--node-ip-address=195.251.234.24",
+        "--node-manager-port=44077",
+        "--object-store-name=/tmp/ray/session_2024-03-29_14-52-05_813564_151176/sockets/plasma_store",
+        "--raylet-name=/tmp/ray/session_2024-03-29_14-52-05_813564_151176/sockets/raylet",
+        "--redis-address=None",
+        "--temp-dir=/tmp/ray",
+        "--metrics-agent-port=59711",
+        "--logging-rotate-bytes=536870912",
+        "--logging-rotate-backup-count=5",
+        "--gcs-address=195.251.234.24:52585",
+        "--session-name=session_2024-03-29_14-52-05_813564_151176",
+        "--temp-dir=/tmp/ray",
+        "--webui=",
+        "--storage=None",
+        "--startup-token=20",
+        "--runtime-env-hash=1433665589"
+    ],
+    "state": "running",
+    "program": "/usr/local/lib/python3.10/dist-packages/ray/_private/workers/default_worker.py",
+    "codePathLocal": null,
+    "git": {
+        "remote": "https://github.com/SpirosChadoulos/EMS-env.git",
+        "commit": "9e673df17987939ea199e4e1227df456ecc779c8"
+    },
+    "email": "odycaptain@gmail.com",
+    "root": "/home/odysseas/EMS-env",
+    "host": "mmlabaimensgpuserver",
+    "username": "odysseas",
+    "executable": "/bin/python3",
+    "cpu_count": 12,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 1006.67585,
+        "min": 800.0,
+        "max": 4580.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 799.007,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 903.774,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 978.714,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 894.428,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 880.586,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 911.801,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 957.753,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 838.144,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 991.792,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 880.733,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 960.292,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 841.398,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 800.979,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 800.181,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 887.117,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 799.467,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 3600.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 913.3173141479492,
+            "used": 73.36021041870117
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3080",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3080",
+            "memory_total": 10737418240
+        }
+    ],
+    "memory": {
+        "total": 62.557682037353516
+    }
+}

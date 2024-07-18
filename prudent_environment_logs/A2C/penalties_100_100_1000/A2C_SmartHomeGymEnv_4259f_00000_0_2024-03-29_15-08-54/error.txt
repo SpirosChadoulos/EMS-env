@@ -1,0 +1,42 @@
+Failure # 1 (occurred at 2024-03-29_15-13-45)
+[36mray::A2C.train()[39m (pid=165225, ip=195.251.234.24, repr=A2C)
+  File "/usr/local/lib/python3.10/dist-packages/ray/tune/trainable/trainable.py", line 368, in train
+    raise skipped from exception_cause(skipped)
+  File "/usr/local/lib/python3.10/dist-packages/ray/tune/trainable/trainable.py", line 365, in train
+    result = self.step()
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/algorithms/algorithm.py", line 782, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/algorithms/algorithm.py", line 2713, in _run_one_training_iteration
+    results = self.training_step()
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/algorithms/a2c/a2c.py", line 174, in training_step
+    return Algorithm.training_step(self)
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/algorithms/algorithm.py", line 1343, in training_step
+    train_batch = synchronous_parallel_sample(
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/execution/rollout_ops.py", line 82, in synchronous_parallel_sample
+    sample_batches = [worker_set.local_worker().sample()]
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/evaluation/rollout_worker.py", line 914, in sample
+    batches = [self.input_reader.next()]
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/evaluation/sampler.py", line 92, in next
+    batches = [self.get_data()]
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/evaluation/sampler.py", line 277, in get_data
+    item = next(self._env_runner)
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/evaluation/env_runner_v2.py", line 323, in run
+    outputs = self.step()
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/evaluation/env_runner_v2.py", line 349, in step
+    active_envs, to_eval, outputs = self._process_observations(
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/evaluation/env_runner_v2.py", line 616, in _process_observations
+    processed = policy.agent_connectors(acd_list)
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/connectors/agent/pipeline.py", line 41, in __call__
+    ret = c(ret)
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/connectors/connector.py", line 254, in __call__
+    return [self.transform(d) for d in acd_list]
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/connectors/connector.py", line 254, in <listcomp>
+    return [self.transform(d) for d in acd_list]
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/connectors/agent/view_requirement.py", line 115, in transform
+    agent_collector.add_action_reward_next_obs(d)
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/evaluation/collectors/agent_collector.py", line 288, in add_action_reward_next_obs
+    v = flatten_to_single_ndarray(v)
+  File "/usr/local/lib/python3.10/dist-packages/ray/rllib/utils/spaces/space_utils.py", line 195, in flatten_to_single_ndarray
+    input_ = np.concatenate(expanded, axis=0).flatten()
+  File "<__array_function__ internals>", line 180, in concatenate
+TypeError: 'builtin_function_or_method' object does not support vectorcall
